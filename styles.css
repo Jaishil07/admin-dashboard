@@ -1,6 +1,9 @@
 :root {
     --main-color: #274C77;
     --platinum: #E7ECEF;
+    --icy-blue: #A3CEF1;
+    --linen: #F7ECE1;
+    --bat-yellow: #FFDE00;
 }
 
 
@@ -8,6 +11,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 1.5;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 body {
@@ -18,31 +23,34 @@ body {
 
 
 header {
-    background-color: var(--main-color);
+    background-color: var(--icy-blue);
     display: flex;
     flex-direction: column;
     grid-column: 2 / -1;
 }
 
-header > div {
+header>div {
     display: flex;
     justify-content: space-between;
-    margin: 0px 30px;
+    margin: 0px 50px;
     align-items: center;
 }
 
-.search, .info {
+.search,
+.info {
     display: flex;
     gap: 10px;
     align-items: center;
-    color: white;
+    /* color: white; */
 }
 
-.greeting, .utility {
+.greeting,
+.utility {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: white;
+    /* color: white; */
+    padding-bottom: 10px;
 }
 
 input[type="text"] {
@@ -54,16 +62,56 @@ input[type="text"] {
 }
 
 aside {
-    background-color: red;
+    background-color: var(--main-color);
     grid-column: 1;
     grid-row: 1 / s;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: var(--platinum);
 }
+
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 1.25rem;
+    color: black;
+    color: white;
+    padding: 10px;
+}
+
+.l1,
+.l2 {
+    list-style: none;
+    padding: 25px;
+    font-size: 1.15rem;
+}
+
 
 main {
-    background-color: lightgreen;
+    background-color: var(--platinum);
     grid-row: 2 / s;
+    /* display: grid; */
+    padding: 20px;
+
+
 }
 
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+    margin-top: 15px;
+}
+
+article {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 7.5px solid var(--bat-yellow);
+}
 
 .announcement {
     background-color: lightskyblue;
@@ -74,6 +122,18 @@ main {
     background-color: magenta;
     grid-row: 4 / 6;
 }
+
+
+.last {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.last > svg {
+    fill: grey;
+}
+
 
 img {
     border-radius: 50%;
@@ -86,4 +146,11 @@ button {
     padding: 10px;
     border: none;
     font-weight: 700;
+    background-color: var(--main-color);
+    color: white;
+}
+
+svg {
+    width: 25px;
+    fill: black;
 }
