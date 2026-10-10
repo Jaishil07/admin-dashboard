@@ -114,15 +114,39 @@ article {
 }
 
 .announcement {
-    background-color: lightskyblue;
+    background-color: var(--platinum);
     grid-row: 2 / 4;
 }
 
+.announcement h3 , .trending h3{
+    margin: 5px;
+    text-align: center;
+}
+
+.modal {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.announcement .modes {
+    margin: 5px 0px;
+}
+
+.trending .modes {
+    margin: 5px 0;
+    display: flex;
+    gap: 5px;
+}
+
 .trending {
-    background-color: magenta;
+    background-color: var(--platinum);
     grid-row: 4 / 6;
 }
 
+.modes > img {
+    width: 50px;
+}
 
 .last {
     display: flex;
@@ -153,4 +177,22 @@ button {
 svg {
     width: 25px;
     fill: black;
+}
+
+hr {
+    border: 1px solid grey;
+    width: 75%;
+    margin: 0px auto;
+}
+
+aside svg {
+    fill: white;
+    height: 24px;
+}
+
+
+li{
+    display: flex;
+    align-items: center;
+    margin: 5px 0px;
 }
